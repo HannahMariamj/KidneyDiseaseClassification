@@ -1,0 +1,16 @@
+[2024-09-19 16:12:53,884: INFO: stage_01_DataIngestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-19 16:12:53,885: ERROR: stage_01_DataIngestion: [Errno 2] No such file or directory: 'config\\config.yaml']
+Traceback (most recent call last):
+  File "stage_01_DataIngestion.py", line 25, in <module>
+    obj.main()
+  File "stage_01_DataIngestion.py", line 13, in main
+    config = ConfigurationManager()
+  File "c:\users\hp\downloads\projects\kidneydiseaseclassification\src\cnn_classifier\config\configuration.py", line 12, in __init__
+    self.config = read_yaml(config_filepath)
+  File "C:\Users\hp\anaconda3\envs\cnncls\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "c:\users\hp\downloads\projects\kidneydiseaseclassification\src\cnn_classifier\utils\common.py", line 37, in read_yaml
+    raise e
+  File "c:\users\hp\downloads\projects\kidneydiseaseclassification\src\cnn_classifier\utils\common.py", line 30, in read_yaml
+    with open(path_to_yaml) as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\config.yaml'
